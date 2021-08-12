@@ -6,3 +6,4 @@
 > # BST(Binary Search Tree)
 * 각 Node의 왼쪽 subtree에 있는 모든 Node들의 Key 값은 해당 Node의 Key 값보다 작거나 같고, 각 Node의 오른쪽 subtree에 있는 모든 Node들의 Key 값은 해당 Node의 Key 값보다 크거나 같다. -> Invariant
 * search -> O(h) : h는 tree의 높이
+* h가 n이 되면 O(h) = O(n) => 
