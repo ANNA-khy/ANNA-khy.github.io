@@ -14,6 +14,9 @@
 * Instruction register, Memory address register(다음에 메모리에 읽거나 쓸 주소), Memory buffer register(메모리에 쓰여질 데이터), Input/out address register, Input/output buffer register
 ### 2. Cache
 * Tag와 Block(K words 크기)으로 이루어짐
+* C개의 슬롯으로 이루어짐
+* mapping function: 캐시 안에서 각 block의 위치
+* replacement algorithm, write policy을 적절하게 정하는 것이 중요
 ### 3. Main memory
 ### 4. Magnetic disk
 ### 5. Magnetic tape 
