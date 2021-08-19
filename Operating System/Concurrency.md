@@ -18,4 +18,3 @@
 * local data는 오직 모니터의 procedure로 접근가능하다.
 * 프로세스는 monitor의 procedure 중 하나를 호출하면서 monitor에 들어간다.
 * 한번에 하나의 프로세스만 하나의 monitor에서 실행할 수 있으며 다른 프로세스는 monitor를 호출하는 것이 blocked되며 사용 가능해질때까지 기다려야 한다.
-* 
