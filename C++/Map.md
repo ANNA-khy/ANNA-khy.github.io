@@ -12,3 +12,5 @@
 * unordered_map은 해시 테이블로 구현됨
 * 해시 충돌이 많이 일어나면 성능이 떨어짐
 * 각 데이터에 접근하기 위한 시간 복잡도: O(1) -> 검색/삽입/삭제
+* bucket: 키 값이 key인 요소의 bucket number를 return
+* count: key와 매핑된 값들의 개수
