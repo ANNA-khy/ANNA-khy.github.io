@@ -1,3 +1,18 @@
+# Types of Scheduling
+
+## Long-term scheduling
+* 어떤 프로그램이 프로세스가 될 것인지 결정한다. -> 새로운 프로세스 생성
+* multiprogramming의 정도를 조절한다.
+* short-term scheduler의 queue에 추가된다.
+## Medium-term scheduling
+* 프로세스를 메인 메모리에 머물게 할 것인지 결정한다.
+## Short-term scheduling
+* Ready 상태의 프로세스 중 어떤 프로세스를 다음에 실행할 것인지 결정한다.
+* short-term scheduler = dispatcher
+* clock interrupts, I/O interrupts, OS calls, signals 등의 event로 short-term scheduler가 실행된다.
+## I/O scheduling
+* 어떤 프로세스의 I/O request가 처리될 것인지 결정한다.
+
 # Scheduling Policies
 
 ## FCFS(First Come First Served)
