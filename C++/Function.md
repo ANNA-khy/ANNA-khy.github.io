@@ -33,6 +33,4 @@ private:
 * 매개변수목록은 생략가능하다.
 * return type은 자동으로 추론된다.
 <pre>
-<code>[](int a) {
-            return (a+1);
-       }</code></pre>
+<code>[](int a) { return (a+1); }</code></pre>
