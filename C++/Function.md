@@ -28,4 +28,11 @@ private:
 
 # Lambda
 * 함수가 간단한 함수일때 함수를 호출하는 대신 함수를 호출하는 곳에 inline시키는 표현식
-* 
+* capture절 매개변수목록 { 람다 본문 }
+* capture절에서 람다 외부의 변수들을 capture하여 접근할 수 있다.
+* 매개변수목록은 생략가능하다.
+* return type은 자동으로 추론된다.
+<pre>
+<code>[](int a) {
+            return (a+1);
+       }</code></pre>
