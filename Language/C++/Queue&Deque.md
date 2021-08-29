@@ -8,4 +8,6 @@
 # Deque (#include &#60;queue&#62;)
 * Double Ended Queue
 * 앞 뒤 모두 삽입, 삭제 가능 => push_front(data), pop_front(), push_back(data), pop_front()
-* capacity()가 없음
+* capacity()가 없다.
+* index를 이용해 각 원소들에 접근할 수 있다.
+* 연속되지 않은 메모리에 저장된다.
