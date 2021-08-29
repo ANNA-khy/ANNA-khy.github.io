@@ -9,3 +9,4 @@
 * 검색(find)/삽입(insert)/삭제(erase) 연산 -> O(n) => 시간복잡도 주의!
 * 앞뒤 삽입/삭제 -> O(1)
 * 연속된 메모리에 저장됨 -> 확장이 필요할 시 전체 vector를 재할당 해야함
+* push_back/emplace_back은 모두 vector의 끝에 element를 추가하는 함수로 push_back은 임시 객체를 생성/파괴하는 과정이 있지만 emplace_back은 그러한 과정이 없다. -> emplace_back은 vector 내에 직접 객체 추가 => emplace_back이 성능에 있어서 더 효율적
