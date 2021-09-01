@@ -19,6 +19,6 @@ calculator(function(x, y){ return x+y; }, 1, 2);</code></pre>
 <pre>
 <code>function Person(...){
       ...
-      }
-      Person.prototype.함수명 = function () {};</code></pre>
+}
+Person.prototype.함수명 = function () {};</code></pre>
       
