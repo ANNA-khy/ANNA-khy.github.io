@@ -1,3 +1,3 @@
 # Greedy 알고리즘
 
-# Dijkstra 
+# Dijkstra 알고리즘
