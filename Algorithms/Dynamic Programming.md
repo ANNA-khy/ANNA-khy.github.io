@@ -9,3 +9,16 @@
 * 가중치(weight)를 가지고 있는 그래프에서 각 노드에서 다른 모든 노드로 가는 최단 경로를 구하는 문제에 대한 알고리즘
 * 최단 경로 배열을 초기화(연결되어 있으면 두 노드 사이의 가중치로 초기화/연결되어 있지 않으면 무한으로 초기화)
 * SP[i][j] = mininum(SP[i][j], SP[i][k]+SP[k][j])
+~~~
+# include <algorithm>
+void floySP(int N, int Weight[][], int D[][]) {
+	int i, j, k;
+	D = W;
+	for (k = 0; k < N; k++) {
+		for (i = 0; i < N; i++) {
+			for (j = 0; j < N; j++)
+				D[i][j] = min(D[i][j], D[i][k] + D[k][j]);
+		}
+	}
+}
+~~~
