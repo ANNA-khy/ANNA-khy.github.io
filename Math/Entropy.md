@@ -4,7 +4,7 @@
 # Cross Entropy Error
 * loss function으로 사용한다.</br>
 <math>
-$E = \sum_{k} t_k \log{y_k}$
+$$E = \sum_{k} t_k \log{y_k}$$
   </br>
 </math>
-$t_k$는 label, $y_k$는 신경망의 output
+($t_k$는 label, $y_k$는 신경망의 output)
