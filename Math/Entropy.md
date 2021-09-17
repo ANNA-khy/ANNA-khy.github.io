@@ -5,5 +5,5 @@
 * loss function으로 사용한다.</br>
 $$
 E = \sum_{k} t_klog_y_k
-$$
+$$</br>
 $t_k$는 label, $y_k$는 신경망의 output
