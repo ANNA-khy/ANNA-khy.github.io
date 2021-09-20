@@ -6,3 +6,10 @@
 * x의 값이 커지면 $\exp (-x)$는 $-infinity$로 가고 x의 값이 작아지면 0으로 간다.
 * sigmoid function은 x의 값이 커지면 0에 수렴하고 x의 값이 0에 가까워지면 1에 수렴한다.
 $$ h(x) = {1 \over 1+\exp (-x)} $$
+
+# ReLU function
+* Rectified Linear Unit function
+* 입력이 0을 넘으면 그 입력 값을 그대로 출력하고 0이하이면 0을 출력
+* $$ h(x) = \begin{cases}x & (x>0) \\
+0 & (x\le0)\end{cases} $$
+
