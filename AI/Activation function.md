@@ -9,6 +9,7 @@ $$ h(x) = {1 \over 1+\exp (-x)} $$
 
 # ReLU function
 * Rectified Linear Unit function
+* 자주 활용되는 activation function
 * 입력이 0을 넘으면 그 입력 값을 그대로 출력하고 0이하이면 0을 출력
 $$ h(x) = 
 \begin{cases}
