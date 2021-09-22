@@ -8,4 +8,28 @@
 ~~~ 
 c = a * b
 ~~~
+## np.dot(a,b) vs np.matmul vs np.multiply vs a * b 
+* np.dot과 np.matmul은 2차원에서는 일반적인 행렬의 곱
+* a*b와 np.multiply는 array 단위의 곱
+* 아래 코드에서 a, b는 a*b이 불가능하다.
+~~~
+import numpy as np
+a = np.array([[1, 2, 3], [4,5,6]])
+b = np.array([[1,2],[3,4],[5,6]])
+c = np.array([1,2,3])
+
+print(a.dot(b)) 
+print(np.dot(a,b))
+#[[22 28]
+# [49 64]]
+#[[22 28]
+# [49 64]]
+print(a*c)
+#[[ 1  4  9]
+# [ 4 10 18]]
+print(b*b)
+#[[ 1  4]
+# [ 9 16]
+# [25 36]]
+~~~
 ## Broadcasting
