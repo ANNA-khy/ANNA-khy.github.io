@@ -8,28 +8,73 @@
 ~~~ 
 c = a * b
 ~~~
-## np.dot(a,b) vs np.matmul vs np.multiply vs a * b 
-* np.dot과 np.matmul은 2차원에서는 일반적인 행렬의 곱
-* a*b와 np.multiply는 array 단위의 곱
-* 아래 코드에서 a, b는 a*b이 불가능하다.
+## np.dot(a,b)
+* 1차원에서는 inner product, 2차원에서는 행렬의 곱(matmul을 쓰자!) 
+* a는 N차원 b는 1차원이면 sum product
+* a는 N차원 b는 M차원(M>=2)이면 sum product
 ~~~
 import numpy as np
+
+a = np.array([[1, 2, 3], [4,5,6]])
+b = np.array([[1,2],[3,4],[5,6]])
+
+print(np.dot(a,b))
+# [[22 28]
+# [49 64]]
+~~~
+## np.inner(a,b)
+* 1차원에서는 inner product, 더 높은 차원에서는 마지막 축에 대한 sum product
+* a와 b의 shape에서 마지막 차원은 일치해야 한다. 
+~~~
+import numpy as np
+
+a = np.array([[1, 2, 3], [4,5,6]])
+c = np.array([1,2,3])
+
+print(np.inner(a,c))
+# [14, 32]
+~~~
+## np.matmul(a, b)
+* matrix product
+* shape는 (n, k)(k, m) => (n, m)
+~~~
+import numpy as np
+
 a = np.array([[1, 2, 3], [4,5,6]])
 b = np.array([[1,2],[3,4],[5,6]])
 c = np.array([1,2,3])
 
-print(a.dot(b)) 
-print(np.dot(a,b))
-#[[22 28]
+print(np.matmul(a,b))
+# [[22 28]
 # [49 64]]
-#[[22 28]
-# [49 64]]
-print(a*c)
-#[[ 1  4  9]
+print(np.matmul(a,c))
+# [14 32]
+~~~
+## np.tensordot(a, b)
+* 특정한 축에 대한 tensor dot product
+~~~
+import numpy as np
+
+a = np.array([[1, 2, 3], [4,5,6]])
+b = np.array([[1,2],[3,4],[5,6]])
+
+print(np.tensordot(a,b,axes=([0,1],[1,0])))
+# 86
+~~~
+## np.multiply(a, b) = a*b
+* a, b를 곱하며 a와 b의 shape가 같지 않다면 broadcast한다.
+~~~
+import numpy as np
+
+a = np.array([[1, 2, 3], [4,5,6]])
+b = np.array([[1, 2, 3], [4,5,6]])
+c = np.array([1,2,3])
+
+print(np.multiply(a, b))
+# [[ 1  4  9]
+# [16 25 36]]
+print(np.multiply(a,c))
+# [[ 1  4  9]
 # [ 4 10 18]]
-print(b*b)
-#[[ 1  4]
-# [ 9 16]
-# [25 36]]
 ~~~
 ## Broadcasting
