@@ -7,6 +7,13 @@
 ## Mutual Exclusion
 * 한 프로세스가 critical section 안에서 공유된 자원에 접근할 때 다른 프로세스는 이 공유된 자원에 접근하는 critical section에 접근하지 말아야 하는 요구사항
 
+# Mutex Locks
+* mutex = mutual exculsion
+* critical section 문제를 해결하기 위해 사용하는 tool
+* acquire(): lock을 요구한다.
+* release(): lock을 풀어준다.
+* lock을 기다리는 프로세스는 계속해서 loop를 돌아야한다.
+* mutex lock => spinlock
 # Semaphores
 * 프로세스 사이에서 신호를 전달하기 위해 사용하는 integer 값이다.
 * initialize, decrement, increment 세 가지 연산은 수행하며 각 연산은 atomic하게 실행된다.
