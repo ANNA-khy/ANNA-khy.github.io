@@ -78,3 +78,6 @@ print(np.multiply(a,c))
 # [ 4 10 18]]
 ~~~
 ## Broadcasting
+* shape(형상)이 다른 배열끼리 계산할 수 있다.
+* 2개 중 하나의 배열이 스칼라인 경우 -> 나머지 하나의 shape에 상관 없이 broadcasting 가능
+* 하나는 2차원 하나는 1차원인 경우 -> 2차원 shape 중 하나와 1차원의 shape가 일치하면 boradcasting 가능
