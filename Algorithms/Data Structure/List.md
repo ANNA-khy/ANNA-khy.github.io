@@ -75,15 +75,4 @@ public:
     }
 
 };
-int main() {
-    LinkedList list;
-    list.AddNode(1);
-    list.AddNode(2);
-    list.AddNode(3);
-    list.AddNode(4);
-    list.AddNode(5);
-    list.PrintNode();
-    list.RemoveNode(3);
-    list.PrintNode();
-}
 ~~~
