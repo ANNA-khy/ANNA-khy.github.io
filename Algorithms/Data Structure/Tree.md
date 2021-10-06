@@ -59,7 +59,7 @@ public:
         Node* it = root;
         Node* pre = root;
 
-        while (it->data != a) {
+        while (true) {
             if (it->data > a) {
                 pre = it;
                 it = it->left;
@@ -83,23 +83,25 @@ public:
                         pre->right = it->left;
                 }
                 else {
-
+                    while ((it->left)!=nullptr) {
+                        it->data = it->left->data;
+                        pre = it;
+                        it = it->left;
+                    }
+                    pre->left = nullptr;
                 }
                 delete it;
+                size--;
                 return;
             }
         }
-        size--;
     }
     void printDFS() { // inorder
         DFS(root);
         std::cout << std::endl;
     }
     void printBFS() {
-        if (root) {
-            std::cout << root->data << " ";
-            BFS(root);
-        }
+        BFS();
         std::cout << std::endl;
     }
 private:
@@ -110,15 +112,32 @@ private:
             DFS(it->right);
         }
     }
-    void BFS(Node* it) {
-        if (it->left)
-            std::cout << it->left->data << " ";
-        if (it->right)
-            std::cout << it->right->data << " ";
-        if (it->left)
-            BFS(it->left);
-        if (it->right)
-            BFS(it->right);
+    void BFS() {
+        Node* it = root;
+        Node** stack;
+        stack = new Node * [size];
+        int postpos = 0;
+        int prepos = 0;
+        std::cout << it->data << " ";
+        stack[postpos] = it;
+        postpos++;
+  
+        while (it != nullptr) {
+            if (prepos == postpos) break;
+            it = stack[prepos];
+            prepos++;
+            if (it->left) {
+                std::cout << it->left->data << " ";
+                stack[postpos] = it->left;
+                postpos++;
+            }
+            if (it->right) {
+                std::cout << it->right->data << " ";
+                stack[postpos] = it->right;
+                postpos++;
+            }
+            
+        }
     }
 };
 ~~~
