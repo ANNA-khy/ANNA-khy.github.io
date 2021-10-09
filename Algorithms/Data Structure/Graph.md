@@ -18,6 +18,7 @@
 # Graph 구현(C++)
 ~~~
 #include <iostream>
+#include <vector>
 #define MAX_SIZE 50
 struct Node
 {
@@ -28,8 +29,7 @@ public:
 class Graph
 {
 private:
-    Node* graph_list[MAX_SIZE];
-    int size = 0;
+    std::vector<Node*> graph_list;
 
 public:
     Graph() {}
@@ -38,11 +38,10 @@ public:
         newnode->data = a;
         newnode->link = nullptr;
         
-        graph_list[size] = newnode;
-        size++;
+        graph_list.emplace_back(newnode);
     }
     void insertEdge(int a, int b) {
-        for (int i = 0; i < size; i++) {
+        for (int i = 0; i < graph_list.size(); i++) {
             if (graph_list[i]->data == a) {
                 Node* newedge = new Node;
                 newedge->data = b;
@@ -60,11 +59,49 @@ public:
         }
     }
     void deleteNode(int a) {
-        
+        for (int i = 0; i < graph_list.size(); i++) {
+            if (graph_list[i]->data == a) {
+                auto it = graph_list[i]->link;
+                auto pre = graph_list[i];
+                while (it != nullptr) {
+                    delete pre;
+                    pre = it;
+                    it = it->link;
+                }
+            }
+            else {
+                auto it = graph_list[i]->link;
+                auto pre = graph_list[i];
+                while (it != nullptr) {
+                    if (it->data == a) {
+                        pre->link = it->link;
+                        delete it;
+                        it = pre->link;
+                    }
+                    else {
+                        pre = it;
+                        it = it->link;
+                    }
+                }
+            } 
+        }
     }
     void deleteEdge(int a, int b) {
-
+        for (int i = 0; i < graph_list.size(); i++) {
+            if (graph_list[i]->data == a) {
+                auto it = graph_list[i]->link;
+                auto pre = graph_list[i];
+                while (it != nullptr) {
+                    if (it->data == b) {
+                        pre->link = it->link;
+                        delete it;
+                        return;
+                    }
+                    pre = it;
+                    it = it->link;
+                }
+            }
+        }
     }
-    
 };
 ~~~
