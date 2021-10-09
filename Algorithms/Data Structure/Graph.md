@@ -19,6 +19,7 @@
 ~~~
 #include <iostream>
 #include <vector>
+#include <queue>
 #define MAX_SIZE 50
 struct Node
 {
@@ -30,14 +31,15 @@ class Graph
 {
 private:
     std::vector<Node*> graph_list;
-
+    std::vector<bool> visited;
+    
 public:
     Graph() {}
-    void insertNode(int a) {
+    void insertNode() {
         Node* newnode = new Node;
-        newnode->data = a;
+        newnode->data = graph_list.size();
         newnode->link = nullptr;
-        
+        visited.emplace_back(false);
         graph_list.emplace_back(newnode);
     }
     void insertEdge(int a, int b) {
@@ -101,6 +103,48 @@ public:
                     it = it->link;
                 }
             }
+        }
+    }
+    void printDFS(int s) {
+        DFS(s);
+        std::cout << std::endl;
+        for (int i = 0; i < visited.size(); i++)
+            visited[i] = false;
+    }
+    void DFS(int s) {
+        visited[s] = true;
+        std::cout << s << " ";
+        Node* it = graph_list[s]->link;
+        while (it != nullptr) {
+            if (!visited[it->data])
+                DFS(it->data);
+            it = it->link;
+        }
+    }
+
+    void printBFS(int s) {
+        std::cout << s << " ";
+        BFS(s);
+        std::cout << std::endl;
+        for (int i = 0; i < visited.size(); i++)
+            visited[i] = false;
+    }
+
+    void BFS(int s) {
+        visited[s] = true;
+        std::queue<Node*> neighbor;
+        Node* it = graph_list[s]->link;
+        while (it != nullptr) {
+            if (visited[it->data] == false) {
+                neighbor.push(it);
+                std::cout << it->data << " ";
+                visited[it->data] = true;
+            }
+            it = it->link;
+        }
+        while (neighbor.size() > 0) {
+            BFS(neighbor.front()->data);
+            neighbor.pop();
         }
     }
 };
