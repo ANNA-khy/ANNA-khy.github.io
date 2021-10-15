@@ -11,3 +11,15 @@
 ### Pooling Layer
 * pooling size = n이라면 input data의 n*n 영역을 하나의 영역으로 줄이는 것
 * max pooing, average pooling 등이 있으며 이미지 인식 분야에서는 주로 max pooling 사용
+## Lenet-5
+* 손글씨를 인식하기 위한 nn으로 1998년에 고안되었다.
+* 2개의 convolutional layer와 2개의 pooling(subsampling) layer와 full connection layer로 이루어져 있다.
+* input은 32*32의 픽셀 이미지
+* C1 layer: kernel은 6개, kernel_size=5, stride=1으로 input(1*32*32) -> output(6*28*28)
+* S2 layer: pooing_size = 2, stride = 2 input(6*28*28) -> output(6*14*14)
+* C3 layer: kernel은 16개, kernel_size=5, stride=1으로 input(6*14*14) -> output(16*10*10)
+* S4 layer: pooing_size = 2, stride = 2 input(16*10*10) -> output(16*5*5)
+* C5 layer: kernel은 120개, kernel_size=5, stride=1으로 input(16*5*5) -> output(120*1*1)
+* F6 layer: dot product input(120) -> output(84)
+* output layer: input(84) -> output(10)
+* https://ieeexplore.ieee.org/document/726791
