@@ -5,10 +5,10 @@
 * ex)
 \begin{bmatrix}
 1 & -2 & -3 & 1 \\\\
-0 & 0 & -1/2 & -1 \\
-0 & 0 & 1 & 2 \\
-0 & 0 & 0 & 0 \\
-0 & 0 & 0 & 0 \\
+0 & 0 & -1/2 & -1 \\\\
+0 & 0 & 1 & 2 \\\\
+0 & 0 & 0 & 0 \\\\
+0 & 0 & 0 & 0 \\\\
 \end{bmatrix}
 # RREF(Reduced Row Echelon Form)
 * 아래와 같은 조건을 만족하는 Echelon Form을 Reduced Row Echelon Form이라고 한다.
@@ -16,9 +16,9 @@
 * 각 leading entry는 그 column에서 유일한 nonzero entry이다.
 * ex)
 \begin{bmatrix}
-1 & 0 & 0 & -1 \\
-0 & 1 & 0 & 0 \\
-0 & 0 & 1 & 2 \\
+1 & 0 & 0 & -1 \\\\
+0 & 1 & 0 & 0 \\\\
+0 & 0 & 1 & 2 \\\\
 \end{bmatrix}
 ## Pivot
 * Pivot position: EF에서 leading entry의 위치
