@@ -5,5 +5,5 @@
 
 # Span
 * 만약에 $\vec{v_1}, \vec{v_2}, ..., \vec{v_i} \in R^n$ 이라면 이 vector들의 모든 linear combination 집합은 subset of $R^n$ spanned by $\vec{v_1}, \vec{v_2}, ..., \vec{v_i}$.
-* $Span \left\{ \vec{v_1}, \vec{v_2}, ..., \vec{v_i} \right\}$ 로 표기
+* $Span \left\{  \right\}$ 로 표기
 * vector들로 나타낼 수 있는 공간을 포괄(span)한다는 의미 => $R^n$의 부분 집합
