@@ -1,6 +1,6 @@
 # Definition
 * vector: 한 개의 column을 가진 matrix
-* {R^n}: n개의 entry를 가진 모든 vector의 집합
+* $R^n$: n개의 entry를 가진 모든 vector의 집합
 * R^n에 속하는 vector들의 교환법칙, 결합법칙, 분배법칙은 성립한다.
 
 # Span
