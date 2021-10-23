@@ -8,6 +8,7 @@
 * Regular languages
 * Regular grammars
 ## Pushdown Automata
-* Context-free languages, context-free grammars
+* Context-free languages
+* Context-free grammars
 ## Turing Machines
 ### Halting Problem
