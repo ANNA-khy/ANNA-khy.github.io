@@ -10,6 +10,7 @@
 * stride: 필터 연산의 간격
 ### Pooling Layer
 * pooling size = n이라면 input data의 n*n 영역을 하나의 영역으로 줄이는 것
+* max pooling이라면 일정한 크기 내에서 가장 큰 값을 뽑아내는 것으로 이미지의 특징을 추출하고 overfitting을 줄일 수 있다.
 * max pooing, average pooling 등이 있으며 이미지 인식 분야에서는 주로 max pooling 사용
 ## Lenet-5
 * 손글씨를 인식하기 위한 nn으로 1998년에 고안되었다.
@@ -23,3 +24,12 @@
 * F6 layer: dot product input(120) -> output(84)
 * output layer: input(84) -> output(10)
 * https://ieeexplore.ieee.org/document/726791
+
+## 그외
+* AlexNet
+* VGGNet
+* ZFNet
+* GoogLeNet,
+* ResNet
+* DenseNet
+* ShuffleNet
