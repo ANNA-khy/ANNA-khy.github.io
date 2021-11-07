@@ -1,0 +1,7 @@
+# MySQL 특징
+# MySQL 명령어
+## JOIN
+* INNER JOIN
+* OUTER JOIN
+## CASE
+* CASE WHEN 조건 THEN 반환값 ELSE 반환값 END AS 별칭
