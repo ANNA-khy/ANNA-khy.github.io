@@ -4,7 +4,8 @@
 * CNN은 데이터의 형상을 유지하여 연산을 진행한다.
 ### Convolutional Layer
 * filter = kernel -> weight에 해당하는 것
-* 필터 연산을 진행
+* 필터 연산을 진행 => 필터의 개수는 layer별 연산시간량을 일정하게 유지할 수 있도록 정한다
+* pooling이 2*2라면 픽셀은 1/4 줄어들게 된다 => 필터의 개수는 4배 증가시킨다
 * n * n 의 input data가 m * m 의 kernel을 만나면 n-(m-1) * n - (m-1)의 output이 된다. (padding=0, stride=1 일때)
 * padding: input data에 특정한 값으로 채워서 output의 크기를 조절한다.
 * stride: 필터 연산의 간격
