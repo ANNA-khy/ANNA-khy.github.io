@@ -1,3 +1,7 @@
+---
+title: Activation Function
+use_math: true
+---
 # Activation function
 * 인공지능 신경망에서 입력이 주어졌을 때 출력을 내는 함수
 
