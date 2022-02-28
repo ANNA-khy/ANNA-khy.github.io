@@ -199,6 +199,13 @@ yat:
 markdown: kramdown
 kmarkdown:
   input: GFM
+  
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 
 plugins:
   - jekyll-feed
